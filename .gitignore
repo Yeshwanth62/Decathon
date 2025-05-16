@@ -44,3 +44,5 @@ data/db/
 
 # Deployment packages
 *.zip
+# Local Netlify folder
+.netlify

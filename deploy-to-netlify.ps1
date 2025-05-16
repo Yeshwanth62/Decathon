@@ -9,7 +9,7 @@ if (-not (Test-Path -Path "sanjeevani-frontend/build")) {
     Set-Location -Path "sanjeevani-frontend"
     npm run build
     Set-Location -Path ".."
-    
+
     if (-not (Test-Path -Path "sanjeevani-frontend/build")) {
         Write-Host "Failed to build the application. Exiting..." -ForegroundColor Red
         exit 1
@@ -38,4 +38,14 @@ Write-Host "4. Your site will be available at a Netlify subdomain" -ForegroundCo
 Write-Host ""
 Write-Host "For a custom domain, go to Site settings > Domain management > Add custom domain" -ForegroundColor Yellow
 Write-Host ""
+
+# Open Netlify Drop in the browser
+Write-Host "Would you like to open Netlify Drop in your browser? (Y/N)" -ForegroundColor Cyan
+$response = Read-Host
+
+if ($response -eq "Y" -or $response -eq "y") {
+    Write-Host "Opening Netlify Drop..." -ForegroundColor Green
+    Start-Process "https://app.netlify.com/drop"
+}
+
 Write-Host "=== Deployment Complete ===" -ForegroundColor Green
