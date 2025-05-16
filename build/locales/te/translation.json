@@ -1,0 +1,168 @@
+{
+  "language": {
+    "name": "తెలుగు",
+    "en": "ఆంగ్లం",
+    "hi": "హిందీ",
+    "kn": "కన్నడ",
+    "te": "తెలుగు",
+    "ta": "తమిళం",
+    "ml": "మలయాళం",
+    "current": "ప్రస్తుతం",
+    "select": "భాషను ఎంచుకోండి",
+    "changing": "భాష మారుస్తోంది..."
+  },
+  "nav": {
+    "home": "హోమ్",
+    "dashboard": "డాష్‌బోర్డ్",
+    "appointments": "అపాయింట్‌మెంట్లు",
+    "profile": "ప్రొఫైల్",
+    "settings": "సెట్టింగ్‌లు",
+    "login": "లాగిన్",
+    "logout": "లాగౌట్"
+  },
+  "auth": {
+    "welcome": "సంజీవని కి స్వాగతం",
+    "login": "లాగిన్",
+    "register": "రిజిస్టర్",
+    "email": "ఇమెయిల్",
+    "emailPlaceholder": "మీ ఇమెయిల్‌ను నమోదు చేయండి",
+    "password": "పాస్‌వర్డ్",
+    "passwordPlaceholder": "మీ పాస్‌వర్డ్‌ను నమోదు చేయండి",
+    "confirmPassword": "పాస్‌వర్డ్‌ను నిర్ధారించండి",
+    "confirmPasswordPlaceholder": "మీ పాస్‌వర్డ్‌ను నిర్ధారించండి",
+    "name": "పూర్తి పేరు",
+    "namePlaceholder": "మీ పూర్తి పేరును నమోదు చేయండి",
+    "phone": "ఫోన్ నంబర్",
+    "phonePlaceholder": "మీ ఫోన్ నంబర్‌ను నమోదు చేయండి",
+    "preferredLanguage": "ఇష్టమైన భాష",
+    "role": "నేను ఒక",
+    "roles": {
+      "patient": "రోగి",
+      "doctor": "డాక్టర్",
+      "hospital": "ఆసుపత్రి"
+    },
+    "otp": "OTP",
+    "otpPlaceholder": "మీ ఫోన్‌కి పంపిన OTPని నమోదు చేయండి",
+    "sendOtp": "OTP పంపండి",
+    "verifyOtp": "OTP ధృవీకరించండి",
+    "otpSent": "OTP పంపబడింది",
+    "otpSentDescription": "దయచేసి OTP కోసం మీ ఫోన్‌ను తనిఖీ చేయండి",
+    "otpVerified": "OTP ధృవీకరించబడింది",
+    "loginRequired": "లాగిన్ అవసరం",
+    "loginSuccess": "లాగిన్ విజయవంతమైంది",
+    "registerSuccess": "రిజిస్ట్రేషన్ విజయవంతమైంది",
+    "loginNow": "దయచేసి మీ ఆధారాలతో లాగిన్ చేయండి",
+    "loggingIn": "లాగిన్ అవుతోంది...",
+    "registering": "రిజిస్టర్ అవుతోంది...",
+    "sendingOtp": "OTP పంపుతోంది...",
+    "verifyingOtp": "OTP ధృవీకరిస్తోంది...",
+    "loggedOut": "విజయవంతంగా లాగౌట్ అయ్యారు",
+    "sessionExpired": "మీ సెషన్ ముగిసింది. దయచేసి మళ్లీ లాగిన్ చేయండి.",
+    "orLoginWith": "లేదా దీనితో లాగిన్ చేయండి",
+    "errors": {
+      "emailRequired": "ఇమెయిల్ అవసరం",
+      "passwordRequired": "పాస్‌వర్డ్ అవసరం",
+      "nameRequired": "పేరు అవసరం",
+      "phoneRequired": "ఫోన్ నంబర్ అవసరం",
+      "passwordMismatch": "పాస్‌వర్డ్‌లు సరిపోలడం లేదు",
+      "passwordLength": "పాస్‌వర్డ్ కనీసం 8 అక్షరాలు ఉండాలి",
+      "loginFailed": "లాగిన్ విఫలమైంది. దయచేసి మీ ఆధారాలను తనిఖీ చేయండి.",
+      "registerFailed": "రిజిస్ట్రేషన్ విఫలమైంది. దయచేసి మళ్లీ ప్రయత్నించండి.",
+      "otpRequired": "OTP అవసరం",
+      "otpSendFailed": "OTP పంపడం విఫలమైంది. దయచేసి మళ్లీ ప్రయత్నించండి.",
+      "otpVerifyFailed": "OTP ధృవీకరించడం విఫలమైంది. దయచేసి మళ్లీ ప్రయత్నించండి."
+    }
+  },
+  "dashboard": {
+    "welcomeMessage": "ఇక్కడ మీ ఆరోగ్యం మరియు అపాయింట్‌మెంట్ల అవలోకనం ఉంది.",
+    "healthMetrics": "ఆరోగ్య మెట్రిక్స్",
+    "healthVisualizations": "3D ఆరోగ్య విజువలైజేషన్స్",
+    "upcomingAppointments": "రాబోయే అపాయింట్‌మెంట్లు",
+    "noAppointments": "మీకు రాబోయే అపాయింట్‌మెంట్లు ఏవీ లేవు.",
+    "bookAppointment": "అపాయింట్‌మెంట్ బుక్ చేయండి",
+    "viewDetails": "వివరాలు చూడండి",
+    "quickActions": "త్వరిత చర్యలు",
+    "actions": {
+      "bookAppointment": "అపాయింట్‌మెంట్ బుక్ చేయండి",
+      "viewMedicalRecords": "వైద్య రికార్డులు",
+      "findDoctors": "డాక్టర్లను కనుగొనండి",
+      "findHospitals": "ఆసుపత్రులను కనుగొనండి"
+    },
+    "stats": {
+      "upcomingAppointments": "రాబోయే అపాయింట్‌మెంట్లు",
+      "nextAppointment": "తదుపరి అపాయింట్‌మెంట్ త్వరలో",
+      "bloodPressure": "రక్తపోటు",
+      "heartRate": "గుండె వేగం",
+      "bloodGlucose": "రక్తంలో చక్కెర",
+      "normal": "సాధారణ పరిధి"
+    }
+  },
+  "health": {
+    "metrics": {
+      "systolic": "సిస్టోలిక్",
+      "diastolic": "డయాస్టోలిక్",
+      "heartRate": "గుండె వేగం",
+      "bloodGlucose": "రక్తంలో చక్కెర",
+      "weight": "బరువు"
+    },
+    "charts": {
+      "bloodPressure": {
+        "title": "రక్తపోటు",
+        "description": "కాలక్రమేణా సిస్టోలిక్ మరియు డయాస్టోలిక్ ఒత్తిడి"
+      },
+      "heartRate": {
+        "title": "గుండె వేగం",
+        "description": "కాలక్రమేణా నిమిషానికి కొట్టుకోవడాలు"
+      },
+      "bloodGlucose": {
+        "title": "రక్తంలో చక్కెర",
+        "description": "కాలక్రమేణా రక్తంలో చక్కెర స్థాయిలు"
+      },
+      "weight": {
+        "title": "బరువు",
+        "description": "కాలక్రమేణా కిలోలలో బరువు"
+      }
+    },
+    "models": {
+      "heart": {
+        "title": "గుండె",
+        "description": "రియల్-టైమ్ గుండె వేగంతో మీ గుండె యొక్క ఇంటరాక్టివ్ 3D మోడల్"
+      },
+      "lungs": {
+        "title": "ఊపిరితిత్తులు",
+        "description": "శ్వాస సిమ్యులేషన్‌తో మీ ఊపిరితిత్తుల ఇంటరాక్టివ్ 3D మోడల్"
+      },
+      "brain": {
+        "title": "మెదడు",
+        "description": "కార్యకలాప విజువలైజేషన్‌తో మీ మెదడు యొక్క ఇంటరాక్టివ్ 3D మోడల్"
+      }
+    },
+    "timeRange": {
+      "week": "గత 7 రోజులు",
+      "month": "గత 30 రోజులు",
+      "quarter": "గత 90 రోజులు",
+      "year": "గత సంవత్సరం"
+    }
+  },
+  "notifications": {
+    "title": "నోటిఫికేషన్లు",
+    "unread": "చదవనివి",
+    "empty": "మీకు నోటిఫికేషన్లు ఏవీ లేవు",
+    "markAllRead": "అన్నింటినీ చదివినట్లుగా గుర్తించండి",
+    "types": {
+      "appointment": "అపాయింట్‌మెంట్",
+      "reminder": "రిమైండర్",
+      "message": "సందేశం"
+    }
+  },
+  "common": {
+    "yes": "అవును",
+    "no": "కాదు",
+    "cancel": "రద్దు చేయండి",
+    "save": "సేవ్ చేయండి",
+    "edit": "సవరించండి",
+    "delete": "తొలగించండి",
+    "loading": "లోడ్ అవుతోంది...",
+    "close": "మూసివేయండి"
+  }
+}

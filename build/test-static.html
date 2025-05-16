@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static File Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f4f8;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #4299E1;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4299E1;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Static File Test</h1>
+        <p>If you can see this page, static file serving is working correctly!</p>
+        <p class="success">✓ Static file serving is working</p>
+        <p>This means the issue is with the SPA routing configuration.</p>
+        <a href="/" class="button">Go to Main Application</a>
+    </div>
+</body>
+</html>

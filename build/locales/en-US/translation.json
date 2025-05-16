@@ -1,0 +1,248 @@
+{
+  "app": {
+    "name": "Sanjeevani 2.0",
+    "tagline": "Advanced Healthcare Platform"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "resetPassword": "Reset Password",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "dob": "Date of Birth",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "loginRequired": "Please login to continue",
+    "loginSuccess": "Login successful",
+    "signupSuccess": "Account created successfully",
+    "logoutSuccess": "Logged out successfully",
+    "resetSuccess": "Password reset link sent to your email",
+    "error": "Authentication error",
+    "welcome": "Welcome to Sanjeevani 2.0",
+    "register": "Register",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter your password",
+    "namePlaceholder": "Enter your full name",
+    "phonePlaceholder": "Enter your phone number",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "loggingIn": "Logging in...",
+    "orLoginWith": "Or login with",
+    "preferredLanguage": "Preferred Language",
+    "role": "Role",
+    "roles": {
+      "patient": "Patient",
+      "doctor": "Doctor",
+      "hospital": "Hospital"
+    },
+    "otp": "OTP",
+    "otpPlaceholder": "Enter OTP",
+    "sendOtp": "Send OTP",
+    "verifyOtp": "Verify OTP",
+    "registering": "Registering...",
+    "verifyingOtp": "Verifying OTP...",
+    "sendingOtp": "Sending OTP...",
+    "otpSent": "OTP Sent",
+    "otpSentDescription": "Please check your phone for the OTP",
+    "otpVerified": "OTP Verified",
+    "registerSuccess": "Registration Successful",
+    "loginNow": "You can now login with your credentials",
+    "errors": {
+      "emailRequired": "Email is required",
+      "passwordRequired": "Password is required",
+      "nameRequired": "Name is required",
+      "phoneRequired": "Phone number is required",
+      "passwordMismatch": "Passwords do not match",
+      "passwordLength": "Password must be at least 8 characters",
+      "loginFailed": "Login failed. Please check your credentials",
+      "registerFailed": "Registration failed. Please try again",
+      "otpSendFailed": "Failed to send OTP. Please try again",
+      "otpVerifyFailed": "Failed to verify OTP. Please try again",
+      "otpRequired": "OTP is required",
+      "serverUnavailable": "Server is currently unavailable. Please try again later."
+    }
+  },
+  "language": {
+    "select": "Select Language",
+    "current": "Current",
+    "changing": "Changing..."
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "appointments": "Appointments",
+    "medicalRecords": "Medical Records",
+    "doctors": "Doctors",
+    "hospitals": "Hospitals",
+    "profile": "Profile",
+    "settings": "Settings",
+    "help": "Help & Support"
+  },
+  "home": {
+    "hero": {
+      "title": "Your Health, Our Priority",
+      "subtitle": "Advanced healthcare platform with AI-powered diagnostics, telemedicine, and personalized health tracking",
+      "cta": "Get Started"
+    },
+    "features": {
+      "title": "Why Choose Sanjeevani 2.0",
+      "subtitle": "Our platform offers a comprehensive suite of healthcare services designed to provide you with the best care possible.",
+      "items": [
+        {
+          "title": "AI-Powered Diagnostics",
+          "description": "Advanced algorithms to help identify potential health issues early"
+        },
+        {
+          "title": "Telemedicine",
+          "description": "Connect with doctors remotely through secure video consultations"
+        },
+        {
+          "title": "Health Tracking",
+          "description": "Monitor your vital signs and health metrics over time"
+        },
+        {
+          "title": "Medical Records",
+          "description": "Secure storage and easy access to your complete medical history"
+        },
+        {
+          "title": "Emergency Services",
+          "description": "Quick access to emergency care with location tracking"
+        },
+        {
+          "title": "Appointment Booking",
+          "description": "Easily schedule appointments with doctors and specialists"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to take control of your health?",
+      "subtitle": "Join thousands of users who trust Sanjeevani 2.0 for their healthcare needs",
+      "button": "Sign Up Now"
+    }
+  },
+  "dashboard": {
+    "welcomeMessage": "Here's your health overview and upcoming appointments",
+    "healthMetrics": "Health Metrics",
+    "upcomingAppointments": "Upcoming Appointments",
+    "healthVisualizations": "Health Visualizations",
+    "quickActions": "Quick Actions",
+    "noAppointments": "You have no upcoming appointments",
+    "bookAppointment": "Book an Appointment",
+    "viewDetails": "View Details",
+    "stats": {
+      "upcomingAppointments": "Upcoming Appointments",
+      "bloodPressure": "Blood Pressure",
+      "heartRate": "Heart Rate",
+      "bloodGlucose": "Blood Glucose",
+      "nextAppointment": "Next in 3 days",
+      "normal": "Normal range"
+    },
+    "actions": {
+      "bookAppointment": "Book Appointment",
+      "viewMedicalRecords": "Medical Records",
+      "findDoctors": "Find Doctors",
+      "findHospitals": "Find Hospitals"
+    }
+  },
+  "appointment": {
+    "book": "Book Appointment",
+    "searchTitle": "Find a Doctor",
+    "specialty": "Specialty",
+    "location": "Location",
+    "date": "Date",
+    "type": "Appointment Type",
+    "selectSpecialty": "Select Specialty",
+    "enterLocation": "Enter location",
+    "search": "Search",
+    "searching": "Searching...",
+    "foundDoctors": "Found {{count}} doctors",
+    "selectDoctor": "Select a Doctor",
+    "selectAndContinue": "Select & Continue",
+    "yearsExp": "years exp.",
+    "availableSlots": "available slots",
+    "selectTimeAndDetails": "Select Time & Enter Details",
+    "availableTimeSlots": "Available Time Slots",
+    "appointmentDetails": "Appointment Details",
+    "reason": "Reason for Visit",
+    "symptoms": "Symptoms",
+    "additionalNotes": "Additional Notes",
+    "continue": "Continue",
+    "back": "Back",
+    "reviewDetails": "Please review your appointment details before confirming",
+    "appointmentSummary": "Appointment Summary",
+    "confirmAppointment": "Confirm Appointment",
+    "bookingSuccess": "Appointment Booked",
+    "bookingSuccessDesc": "Your appointment has been successfully booked",
+    "bookingError": "Failed to book appointment",
+    "searchError": "Failed to search for doctors",
+    "selectTimeSlot": "Please select a time slot",
+    "steps": {
+      "search": "Search",
+      "searchDesc": "Find doctors",
+      "select": "Select",
+      "selectDesc": "Choose doctor",
+      "details": "Details",
+      "detailsDesc": "Enter info",
+      "confirm": "Confirm",
+      "confirmDesc": "Book appointment"
+    },
+    "types": {
+      "inPerson": "In-Person",
+      "telemedicine": "Telemedicine"
+    },
+    "specialties": {
+      "cardiologist": "Cardiologist",
+      "dermatologist": "Dermatologist",
+      "neurologist": "Neurologist",
+      "pediatrician": "Pediatrician",
+      "orthopedic": "Orthopedic"
+    }
+  },
+  "health": {
+    "metrics": {
+      "systolic": "Systolic",
+      "diastolic": "Diastolic",
+      "heartRate": "Heart Rate",
+      "bloodGlucose": "Blood Glucose",
+      "weight": "Weight"
+    },
+    "charts": {
+      "bloodPressure": {
+        "title": "Blood Pressure",
+        "description": "Systolic and diastolic pressure over time"
+      },
+      "heartRate": {
+        "title": "Heart Rate",
+        "description": "Beats per minute over time"
+      },
+      "bloodGlucose": {
+        "title": "Blood Glucose",
+        "description": "Blood sugar levels over time"
+      },
+      "weight": {
+        "title": "Weight",
+        "description": "Body weight over time"
+      }
+    },
+    "models": {
+      "heart": {
+        "title": "Heart",
+        "description": "3D visualization of your heart activity"
+      },
+      "lungs": {
+        "title": "Lungs",
+        "description": "3D visualization of your lung function"
+      },
+      "brain": {
+        "title": "Brain",
+        "description": "3D visualization of your brain activity"
+      }
+    }
+  }
+}

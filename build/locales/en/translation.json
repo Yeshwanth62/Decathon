@@ -1,0 +1,317 @@
+{
+  "language": {
+    "name": "English",
+    "en": "English",
+    "hi": "Hindi",
+    "kn": "Kannada",
+    "te": "Telugu",
+    "ta": "Tamil",
+    "ml": "Malayalam",
+    "current": "Current",
+    "select": "Select Language",
+    "changing": "Changing language..."
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "appointments": "Appointments",
+    "profile": "Profile",
+    "settings": "Settings",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "auth": {
+    "welcome": "Welcome to Sanjeevani",
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "preferredLanguage": "Preferred Language",
+    "role": "I am a",
+    "roles": {
+      "patient": "Patient",
+      "doctor": "Doctor",
+      "hospital": "Hospital"
+    },
+    "otp": "OTP",
+    "otpPlaceholder": "Enter the OTP sent to your phone",
+    "sendOtp": "Send OTP",
+    "verifyOtp": "Verify OTP",
+    "otpSent": "OTP Sent",
+    "otpSentDescription": "Please check your phone for the OTP",
+    "otpVerified": "OTP Verified",
+    "loginRequired": "Login Required",
+    "loginSuccess": "Login Successful",
+    "registerSuccess": "Registration Successful",
+    "loginNow": "Please login with your credentials",
+    "loggingIn": "Logging in...",
+    "registering": "Registering...",
+    "sendingOtp": "Sending OTP...",
+    "verifyingOtp": "Verifying OTP...",
+    "loggedOut": "Logged out successfully",
+    "sessionExpired": "Your session has expired. Please login again.",
+    "orLoginWith": "Or login with",
+    "error": "Authentication error",
+    "errors": {
+      "emailRequired": "Email is required",
+      "passwordRequired": "Password is required",
+      "nameRequired": "Name is required",
+      "phoneRequired": "Phone number is required",
+      "passwordMismatch": "Passwords do not match",
+      "passwordLength": "Password must be at least 8 characters",
+      "loginFailed": "Login failed. Please check your credentials.",
+      "registerFailed": "Registration failed. Please try again.",
+      "otpRequired": "OTP is required",
+      "otpSendFailed": "Failed to send OTP. Please try again.",
+      "otpVerifyFailed": "Failed to verify OTP. Please try again.",
+      "serverUnavailable": "Server is currently unavailable. Please try again later."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Your Health, Our Priority",
+      "subtitle": "Connect with the best doctors, book appointments, and manage your health records all in one place.",
+      "getStarted": "Get Started",
+      "bookAppointment": "Book Appointment"
+    },
+    "features": {
+      "title": "Why Choose Sanjeevani?",
+      "subtitle": "We provide a comprehensive healthcare platform with features designed to make your healthcare journey seamless.",
+      "appointments": {
+        "title": "Easy Appointments",
+        "description": "Book appointments with top doctors in your area with just a few clicks."
+      },
+      "hospitals": {
+        "title": "Best Hospitals",
+        "description": "Access the best hospitals and healthcare facilities near you."
+      },
+      "emergency": {
+        "title": "Emergency Services",
+        "description": "Quick access to emergency services with one-tap ambulance booking."
+      },
+      "multilingual": {
+        "title": "Multilingual Support",
+        "description": "Use the app in your preferred language for a comfortable experience."
+      }
+    },
+    "cta": {
+      "title": "Ready to take control of your health?",
+      "subtitle": "Join thousands of users who trust Sanjeevani for their healthcare needs.",
+      "button": "Join Now"
+    }
+  },
+  "dashboard": {
+    "welcomeMessage": "Here's an overview of your health and appointments.",
+    "healthMetrics": "Health Metrics",
+    "healthVisualizations": "3D Health Visualizations",
+    "upcomingAppointments": "Upcoming Appointments",
+    "noAppointments": "You don't have any upcoming appointments.",
+    "bookAppointment": "Book an Appointment",
+    "viewDetails": "View Details",
+    "quickActions": "Quick Actions",
+    "actions": {
+      "bookAppointment": "Book Appointment",
+      "viewMedicalRecords": "Medical Records",
+      "findDoctors": "Find Doctors",
+      "findHospitals": "Find Hospitals"
+    },
+    "stats": {
+      "upcomingAppointments": "Upcoming Appointments",
+      "nextAppointment": "Next appointment soon",
+      "bloodPressure": "Blood Pressure",
+      "heartRate": "Heart Rate",
+      "bloodGlucose": "Blood Glucose",
+      "normal": "Normal range"
+    }
+  },
+  "health": {
+    "metrics": {
+      "systolic": "Systolic",
+      "diastolic": "Diastolic",
+      "heartRate": "Heart Rate",
+      "bloodGlucose": "Blood Glucose",
+      "weight": "Weight"
+    },
+    "charts": {
+      "bloodPressure": {
+        "title": "Blood Pressure",
+        "description": "Systolic and diastolic pressure over time"
+      },
+      "heartRate": {
+        "title": "Heart Rate",
+        "description": "Beats per minute over time"
+      },
+      "bloodGlucose": {
+        "title": "Blood Glucose",
+        "description": "Blood sugar levels over time"
+      },
+      "weight": {
+        "title": "Weight",
+        "description": "Weight in kg over time"
+      }
+    },
+    "models": {
+      "heart": {
+        "title": "Heart",
+        "description": "Interactive 3D model of your heart with real-time heart rate"
+      },
+      "lungs": {
+        "title": "Lungs",
+        "description": "Interactive 3D model of your lungs with breathing simulation"
+      },
+      "brain": {
+        "title": "Brain",
+        "description": "Interactive 3D model of your brain with activity visualization"
+      }
+    },
+    "timeRange": {
+      "week": "Last 7 days",
+      "month": "Last 30 days",
+      "quarter": "Last 90 days",
+      "year": "Last year"
+    }
+  },
+  "appointment": {
+    "steps": {
+      "search": "Search",
+      "searchDesc": "Find doctors",
+      "select": "Select",
+      "selectDesc": "Choose a doctor",
+      "details": "Details",
+      "detailsDesc": "Appointment info",
+      "confirm": "Confirm",
+      "confirmDesc": "Review and book"
+    },
+    "searchTitle": "Find a Doctor",
+    "specialty": "Specialty",
+    "selectSpecialty": "Select a specialty",
+    "location": "Location",
+    "enterLocation": "Enter your location",
+    "date": "Date",
+    "type": "Appointment Type",
+    "types": {
+      "inPerson": "In-Person",
+      "telemedicine": "Telemedicine"
+    },
+    "search": "Search",
+    "searching": "Searching...",
+    "searchError": "Error searching for doctors",
+    "selectDoctor": "Select a Doctor",
+    "foundDoctors": "Found {{count}} doctors matching your criteria",
+    "yearsExp": "years exp.",
+    "availableSlots": "available slots",
+    "selectAndContinue": "Select & Continue",
+    "back": "Back",
+    "selectTimeAndDetails": "Select Time & Enter Details",
+    "availableTimeSlots": "Available Time Slots",
+    "appointmentDetails": "Appointment Details",
+    "reasonForVisit": "Reason for Visit",
+    "reasonPlaceholder": "E.g., Regular checkup, Fever, etc.",
+    "symptoms": "Symptoms (if any)",
+    "symptomsPlaceholder": "Describe your symptoms",
+    "additionalNotes": "Additional Notes",
+    "notesPlaceholder": "Any additional information for the doctor",
+    "continue": "Continue",
+    "selectTimeSlot": "Please select a time slot",
+    "confirmAppointment": "Confirm Appointment",
+    "reviewDetails": "Please review your appointment details before confirming",
+    "appointmentSummary": "Appointment Summary",
+    "time": "Time",
+    "hospital": "Hospital",
+    "appointmentType": "Appointment Type",
+    "consultationFee": "Consultation Fee",
+    "confirmBooking": "Confirm Booking",
+    "booking": "Booking...",
+    "bookingSuccess": "Appointment Booked Successfully",
+    "bookingSuccessDesc": "Your appointment has been booked successfully. You can view the details in your dashboard.",
+    "bookingError": "Error booking appointment",
+    "specialties": {
+      "cardiologist": "Cardiologist",
+      "dermatologist": "Dermatologist",
+      "neurologist": "Neurologist",
+      "pediatrician": "Pediatrician",
+      "orthopedic": "Orthopedic Surgeon"
+    }
+  },
+  "emergency": {
+    "button": "Emergency",
+    "title": "Emergency Assistance",
+    "confirmation": "Do you need emergency medical assistance?",
+    "disclaimer": "This will dispatch an ambulance to your current location.",
+    "processing": "Processing your emergency request...",
+    "error": "Error",
+    "requested": "Emergency Requested",
+    "onTheWay": "An ambulance is on the way",
+    "eta": "Estimated arrival time: {{minutes}} minutes",
+    "yourLocation": "Your Location",
+    "locationDetected": "Your current location has been detected",
+    "stayCalm": "Please stay calm and wait for the ambulance to arrive.",
+    "cancel": "Cancel Emergency",
+    "cancelled": "Emergency request cancelled",
+    "requestFailed": "Failed to request emergency assistance",
+    "cancelError": "Error cancelling emergency",
+    "cancelFailed": "Failed to cancel emergency request"
+  },
+  "voice": {
+    "assistant": "Voice Assistant",
+    "notSupported": "Voice recognition is not supported in your browser",
+    "listening": "Listening...",
+    "instructions": "Click the microphone and speak a command",
+    "processing": "Processing your command...",
+    "commands": {
+      "home": "go to home",
+      "dashboard": "go to dashboard",
+      "appointments": "go to appointments",
+      "login": "go to login",
+      "changeLanguage": "change language to",
+      "emergency": "emergency",
+      "help": "help"
+    },
+    "responses": {
+      "navigatingTo": "Navigating to {{page}}",
+      "loginFirst": "Please login first to access your dashboard",
+      "languageChanged": "Language changed to {{language}}",
+      "languageNotFound": "Sorry, I couldn't find that language",
+      "emergency": "Initiating emergency assistance",
+      "help": "You can say commands like 'go to home', 'go to dashboard', 'book appointment', 'change language to Hindi', or 'emergency'",
+      "notUnderstood": "Sorry, I didn't understand that command",
+      "error": "Sorry, there was an error processing your command",
+      "loggingOut": "Logging you out of your account",
+      "notLoggedIn": "You are not currently logged in"
+    }
+  },
+  "greetings": {
+    "morning": "Good morning, {{name}}",
+    "afternoon": "Good afternoon, {{name}}",
+    "evening": "Good evening, {{name}}"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "unread": "unread",
+    "empty": "You don't have any notifications",
+    "markAllRead": "Mark All as Read",
+    "types": {
+      "appointment": "Appointment",
+      "reminder": "Reminder",
+      "message": "Message"
+    }
+  },
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "loading": "Loading...",
+    "close": "Close"
+  }
+}
