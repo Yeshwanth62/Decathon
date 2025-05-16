@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="192" height="192" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="96" cy="96" r="88" fill="#4299E1" />
+  <circle cx="96" cy="96" r="76" fill="white" />
+  <path d="M96,40 C60,20 20,40 20,90 C20,140 96,170 96,170 C96,170 172,140 172,90 C172,40 132,20 96,40 Z" fill="#4299E1"/>
+  <text x="96" y="140" font-family="Arial" font-size="24" text-anchor="middle" fill="white">Sanjeevani</text>
+</svg>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjeevani 2.0 - DEPLOYMENT.md</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        code {
+            background-color: #f8f8f8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            color: #555;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body><p><h1>Sanjeevani 2.0 Deployment Guide</h1></p><p>This guide provides step-by-step instructions for deploying Sanjeevani 2.0 to production using GitHub Actions, Netlify, and Render.</p><p>#<h1>Prerequisites</h1></p><p>Before you begin, make sure you have the following:</p><p><li>A GitHub account</li>
+<li>A Netlify account</li>
+<li>A Render account</li>
+<li>A Firebase project</li>
+<li>A MongoDB Atlas cluster</li>
+<li>A Twilio account</li>
+<li>A Google Maps API key</li>
+<li>A Google Analytics account</li>
+<li>A Sentry account</li></p><p>#<h1><li>GitHub Repository Setup</h1></li></p><p>##<h1>Automatic Setup</h1></p><p>We've provided a script to help you set up your GitHub repository:</p><p><code></code>`bash
+<h1>Make the script executable</h1>
+chmod +x setup-github.sh</p><p><h1>Run the script</h1>
+./setup-github.sh
+<code></code>`</p><p>##<h1>Manual Setup</h1></p><p>If you prefer to set up your repository manually:</p><p><li>Create a new repository on GitHub</li>
+2. Initialize a git repository in your local project directory
+3. Add the GitHub repository as a remote
+4. Push your code to GitHub</p><p><code></code>`bash
+git init
+git add .
+git commit -m "Initial commit: Sanjeevani 2.0 healthcare platform"
+git remote add origin https://github.com/yourusername/sanjeevani-2.0.git
+git push -u origin main
+<code></code>`</p><p>#<h1>2. GitHub Secrets Setup</h1></p><p>GitHub Secrets are used to securely store sensitive information like API keys and tokens.</p><p>##<h1>Automatic Setup</h1></p><p>We've provided a script to help you set up your GitHub Secrets:</p><p><code></code>`bash
+<h1>Make the script executable</h1>
+chmod +x setup-github-secrets.sh</p><p><h1>Run the script</h1>
+./setup-github-secrets.sh
+<code></code>`</p><p>##<h1>Manual Setup</h1></p><p>If you prefer to set up your secrets manually:</p><p><li>Go to your GitHub repository</li>
+2. Click on "Settings" > "Secrets and variables" > "Actions"
+3. Click "New repository secret"
+4. Add the following secrets:</p><p>###<h1>Frontend Secrets</h1>
+<li><code>REACT_APP_FIREBASE_API_KEY</code></li>
+<li><code>REACT_APP_FIREBASE_AUTH_DOMAIN</code></li>
+<li><code>REACT_APP_FIREBASE_PROJECT_ID</code></li>
+<li><code>REACT_APP_FIREBASE_STORAGE_BUCKET</code></li>
+<li><code>REACT_APP_FIREBASE_MESSAGING_SENDER_ID</code></li>
+<li><code>REACT_APP_FIREBASE_APP_ID</code></li>
+<li><code>REACT_APP_GOOGLE_MAPS_API_KEY</code></li>
+<li><code>REACT_APP_GA_TRACKING_ID</code></li>
+<li><code>REACT_APP_SENTRY_DSN</code></li>
+<li><code>NETLIFY_AUTH_TOKEN</code></li>
+<li><code>NETLIFY_SITE_ID</code></li></p><p>###<h1>Backend Secrets</h1>
+<li><code>MONGODB_URL</code></li>
+<li><code>MONGODB_DB_NAME</code></li>
+<li><code>JWT_SECRET_KEY</code></li>
+<li><code>JWT_ALGORITHM</code></li>
+<li><code>JWT_ACCESS_TOKEN_EXPIRE_MINUTES</code></li>
+<li><code>JWT_REFRESH_TOKEN_EXPIRE_DAYS</code></li>
+<li><code>FIREBASE_CREDENTIALS</code> (base64 encoded JSON)</li>
+<li><code>TWILIO_ACCOUNT_SID</code></li>
+<li><code>TWILIO_AUTH_TOKEN</code></li>
+<li><code>TWILIO_PHONE_NUMBER</code></li>
+<li><code>GOOGLE_MAPS_API_KEY</code></li>
+<li><code>SENTRY_DSN</code></li>
+<li><code>RENDER_TOKEN</code></li></p><p>#<h1>3. Netlify Setup</h1></p><p>Netlify is used to deploy the frontend of Sanjeevani 2.0.</p><p><li>Go to <a href="https://app.netlify.com/">Netlify</a> and sign in</li>
+2. Click "New site from Git"
+3. Select "GitHub" as your Git provider
+4. Authorize Netlify to access your GitHub account
+5. Select your "sanjeevani-2.0" repository
+6. Configure the build settings:
+   <li>Base directory: <code>sanjeevani-frontend</code></li>
+   <li>Build command: <code>npm run build</code></li>
+   <li>Publish directory: <code>sanjeevani-frontend/build</code></li>
+7. Click "Show advanced" and add the environment variables from your frontend <code>.env.production</code> file
+8. Click "Deploy site"</p><p>#<h1>4. Render Setup</h1></p><p>Render is used to deploy the backend of Sanjeevani 2.0.</p><p><li>Go to <a href="https://dashboard.render.com/">Render</a> and sign in</li>
+2. Click "New" > "Web Service"
+3. Select your "sanjeevani-2.0" repository
+4. Configure the service:
+   <li>Name: "sanjeevani-api"</li>
+   <li>Root Directory: <code>sanjeevani-backend</code></li>
+   <li>Runtime: "Python 3"</li>
+   <li>Build Command: <code>pip install -r requirements.txt</code></li>
+   <li>Start Command: <code>uvicorn app.main:app --host 0.0.0.0 --port $PORT</code></li>
+5. Add the environment variables from your backend <code>.env.production</code> file
+6. Click "Create Web Service"</p><p>#<h1>5. Trigger CI/CD Pipeline</h1></p><p>Once you've set up your GitHub repository, GitHub Secrets, Netlify, and Render, you can trigger the CI/CD pipeline by pushing changes to your repository:</p><p><code></code>`bash
+git add .
+git commit -m "Update configuration"
+git push
+<code></code>`</p><p>This will trigger the GitHub Actions workflows, which will build and deploy your application to Netlify and Render.</p><p>#<h1>6. Verify Deployment</h1></p><p>After the CI/CD pipeline has completed, verify that your application is deployed correctly:</p><p><li>Check the GitHub Actions workflows to make sure they completed successfully</li>
+2. Visit your Netlify site to verify that the frontend is deployed
+3. Visit your Render service to verify that the backend is deployed
+4. Test the application to make sure all features are working correctly</p><p>#<h1>7. Post-Deployment Tasks</h1></p><p>After deploying your application, there are a few additional tasks you should complete:</p><p><li>Set up a custom domain for your frontend and backend</li>
+2. Configure SSL certificates for your custom domains
+3. Set up monitoring and alerting for your application
+4. Set up backups for your MongoDB database
+5. Set up logging and error tracking for your application</p><p>#<h1>Troubleshooting</h1></p><p>If you encounter any issues during deployment, check the following:</p><p><li>GitHub Actions logs for any errors</li>
+2. Netlify deployment logs for frontend issues
+3. Render logs for backend issues
+4. Make sure all environment variables are set correctly
+5. Check that your MongoDB connection string is correct
+6. Verify that your Firebase credentials are valid</p><p>#<h1>Additional Resources</h1></p><p><li><a href="https://docs.github.com/en/actions">GitHub Actions Documentation</a></li>
+<li><a href="https://docs.netlify.com/">Netlify Documentation</a></li>
+<li><a href="https://render.com/docs">Render Documentation</a></li>
+<li><a href="https://docs.atlas.mongodb.com/">MongoDB Atlas Documentation</a></li>
+<li><a href="https://firebase.google.com/docs">Firebase Documentation</a></li>
+<li><a href="https://docs.sentry.io/">Sentry Documentation</a></li>
+<li><a href="https://developers.google.com/analytics">Google Analytics Documentation</a></li>
+<li><a href="https://www.twilio.com/docs">Twilio Documentation</a></li>
+</p></body>
+</html>

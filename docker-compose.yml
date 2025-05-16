@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./sanjeevani-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./sanjeevani-frontend:/app
+      - /app/node_modules
+    environment:
+      - REACT_APP_API_URL=http://backend:8000
+      - REACT_APP_SOCKET_URL=http://backend:8000
+      - REACT_APP_ENABLE_VOICE_COMMANDS=true
+      - REACT_APP_ENABLE_3D_MODELS=true
+      - REACT_APP_ENABLE_EMERGENCY=true
+      - REACT_APP_MAX_3D_QUALITY=high
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./sanjeevani-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./sanjeevani-backend:/app
+    environment:
+      - PORT=8000
+      - DEBUG=true
+      - MONGODB_URL=mongodb://mongodb:27017
+      - MONGODB_DB_NAME=sanjeevani
+      - JWT_SECRET_KEY=local_development_secret_key
+      - JWT_ALGORITHM=HS256
+      - JWT_ACCESS_TOKEN_EXPIRE_MINUTES=60
+      - CORS_ORIGINS=http://localhost:3000,http://frontend:3000
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    command: mongod --logpath=/dev/null # Disable logging
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - "8081:8081"
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+      - ME_CONFIG_MONGODB_PORT=27017
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=pass
+    depends_on:
+      - mongodb
+
+volumes:
+  mongodb_data:

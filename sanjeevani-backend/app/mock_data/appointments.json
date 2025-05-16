@@ -1,0 +1,26 @@
+﻿[
+  {
+    "id": "1",
+    "user_id": "1",
+    "doctor_id": "1",
+    "hospital_id": "1",
+    "date": "2023-05-20",
+    "time": "09:00",
+    "status": "confirmed",
+    "reason": "Regular checkup",
+    "notes": "Bring previous reports",
+    "created_at": "2023-05-15T10:30:00Z"
+  },
+  {
+    "id": "2",
+    "user_id": "1",
+    "doctor_id": "2",
+    "hospital_id": "2",
+    "date": "2023-05-22",
+    "time": "10:00",
+    "status": "pending",
+    "reason": "Fever and cold",
+    "notes": "",
+    "created_at": "2023-05-15T11:45:00Z"
+  }
+]

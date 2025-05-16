@@ -1,0 +1,28 @@
+﻿[
+  {
+    "id": "1",
+    "name": "City Hospital",
+    "address": "123 Main Street, Bangalore",
+    "phone": "+91 9876543210",
+    "email": "info@cityhospital.com",
+    "website": "https://www.cityhospital.com",
+    "specialties": ["Cardiology", "Neurology", "Orthopedics", "General Surgery"],
+    "emergency_services": true,
+    "rating": 4.7,
+    "location": {"latitude": 12.9716, "longitude": 77.5946},
+    "image": "https://images.unsplash.com/photo-1587351021759-3e566b3db4f1"
+  },
+  {
+    "id": "2",
+    "name": "Children's Hospital",
+    "address": "456 Park Avenue, Bangalore",
+    "phone": "+91 9876543211",
+    "email": "info@childrenshospital.com",
+    "website": "https://www.childrenshospital.com",
+    "specialties": ["Pediatrics", "Pediatric Surgery", "Neonatology"],
+    "emergency_services": true,
+    "rating": 4.9,
+    "location": {"latitude": 12.9766, "longitude": 77.5993},
+    "image": "https://images.unsplash.com/photo-1588776814546-daab30f310ce"
+  }
+]

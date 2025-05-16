@@ -1,0 +1,34 @@
+﻿[
+  {
+    "id": "1",
+    "name": "Dr. Rajesh Kumar",
+    "specialty": "Cardiology",
+    "hospital": "City Hospital",
+    "availability": [
+      {"day": "Monday", "slots": ["09:00", "10:00", "11:00", "14:00", "15:00"]},
+      {"day": "Wednesday", "slots": ["09:00", "10:00", "11:00", "14:00", "15:00"]},
+      {"day": "Friday", "slots": ["09:00", "10:00", "11:00", "14:00", "15:00"]}
+    ],
+    "rating": 4.8,
+    "experience": 15,
+    "education": "MBBS, MD (Cardiology)",
+    "languages": ["English", "Hindi", "Kannada"],
+    "profile_image": "https://randomuser.me/api/portraits/men/1.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Dr. Priya Sharma",
+    "specialty": "Pediatrics",
+    "hospital": "Children's Hospital",
+    "availability": [
+      {"day": "Tuesday", "slots": ["09:00", "10:00", "11:00", "14:00", "15:00"]},
+      {"day": "Thursday", "slots": ["09:00", "10:00", "11:00", "14:00", "15:00"]},
+      {"day": "Saturday", "slots": ["09:00", "10:00", "11:00"]}
+    ],
+    "rating": 4.9,
+    "experience": 12,
+    "education": "MBBS, MD (Pediatrics)",
+    "languages": ["English", "Hindi", "Tamil"],
+    "profile_image": "https://randomuser.me/api/portraits/women/2.jpg"
+  }
+]

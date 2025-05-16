@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjeevani 2.0 - SECURITY.md</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        code {
+            background-color: #f8f8f8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            color: #555;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body><p><h1>Sanjeevani 2.0 Security Guide</h1></p><p>This guide provides information on security measures implemented in Sanjeevani 2.0 and best practices for maintaining security.</p><p>#<h1>Overview</h1></p><p>Sanjeevani 2.0 implements the following security measures:</p><p><li><strong>Authentication</strong> - Secure user authentication</li>
+<li><strong>Authorization</strong> - Role-based access control</li>
+<li><strong>Data Protection</strong> - Encryption and secure storage</li>
+<li><strong>API Security</strong> - Secure API endpoints</li>
+<li><strong>Frontend Security</strong> - Secure frontend practices</li>
+<li><strong>Infrastructure Security</strong> - Secure deployment and infrastructure</li>
+<li><strong>Compliance</strong> - Healthcare data compliance</li></p><p>#<h1>Authentication</h1></p><p>Sanjeevani 2.0 uses JWT (JSON Web Tokens) for authentication.</p><p>##<h1>JWT Configuration</h1></p><p><li><strong>Secret Key</strong> - A strong, unique secret key is used for signing JWTs</li>
+<li><strong>Algorithm</strong> - HS256 algorithm is used for signing</li>
+<li><strong>Expiration</strong> - Access tokens expire after 60 minutes</li>
+<li><strong>Refresh Tokens</strong> - Refresh tokens expire after 7 days</li>
+<li><strong>Rotation</strong> - Refresh tokens are rotated on use</li></p><p>##<h1>Password Security</h1></p><p><li><strong>Hashing</strong> - Passwords are hashed using bcrypt</li>
+<li><strong>Salt</strong> - Unique salt is used for each password</li>
+<li><strong>Complexity</strong> - Password complexity requirements are enforced</li>
+<li><strong>Rate Limiting</strong> - Login attempts are rate limited</li></p><p>#<h1>Authorization</h1></p><p>Sanjeevani 2.0 implements role-based access control (RBAC).</p><p>##<h1>Roles</h1></p><p><li><strong>Patient</strong> - Regular user with access to their own data</li>
+<li><strong>Doctor</strong> - Healthcare provider with access to patient data</li>
+<li><strong>Admin</strong> - Administrator with full access</li></p><p>##<h1>Access Control</h1></p><p><li><strong>API Endpoints</strong> - Endpoints are protected based on user roles</li>
+<li><strong>Frontend Routes</strong> - Routes are protected based on user roles</li>
+<li><strong>Data Access</strong> - Data access is restricted based on user roles</li></p><p>#<h1>Data Protection</h1></p><p>Sanjeevani 2.0 implements measures to protect sensitive data.</p><p>##<h1>Encryption</h1></p><p><li><strong>In Transit</strong> - All data is encrypted in transit using HTTPS</li>
+<li><strong>At Rest</strong> - Sensitive data is encrypted at rest</li>
+<li><strong>Database</strong> - MongoDB Atlas encryption is enabled</li></p><p>##<h1>Data Handling</h1></p><p><li><strong>Minimization</strong> - Only necessary data is collected</li>
+<li><strong>Retention</strong> - Data retention policies are implemented</li>
+<li><strong>Deletion</strong> - Secure data deletion procedures are in place</li></p><p>#<h1>API Security</h1></p><p>Sanjeevani 2.0 implements measures to secure API endpoints.</p><p>##<h1>API Protection</h1></p><p><li><strong>Authentication</strong> - All endpoints require authentication</li>
+<li><strong>Rate Limiting</strong> - API rate limiting is implemented</li>
+<li><strong>Input Validation</strong> - All input is validated</li>
+<li><strong>Output Sanitization</strong> - All output is sanitized</li></p><p>##<h1>Headers</h1></p><p><li><strong>CORS</strong> - CORS is properly configured</li>
+<li><strong>Content-Security-Policy</strong> - CSP headers are set</li>
+<li><strong>X-Content-Type-Options</strong> - Prevents MIME type sniffing</li>
+<li><strong>X-Frame-Options</strong> - Prevents clickjacking</li>
+<li><strong>X-XSS-Protection</strong> - Provides XSS protection</li></p><p>#<h1>Frontend Security</h1></p><p>Sanjeevani 2.0 implements measures to secure the frontend application.</p><p>##<h1>React Security</h1></p><p><li><strong>XSS Protection</strong> - React's built-in XSS protection</li>
+<li><strong>CSRF Protection</strong> - CSRF tokens are used</li>
+<li><strong>Content Security Policy</strong> - CSP is configured</li>
+<li><strong>Secure Dependencies</strong> - Dependencies are regularly updated</li></p><p>##<h1>Client-Side Storage</h1></p><p><li><strong>LocalStorage</strong> - Only non-sensitive data is stored</li>
+<li><strong>SessionStorage</strong> - Used for temporary session data</li>
+<li><strong>Cookies</strong> - Secure and HttpOnly flags are set</li></p><p>#<h1>Infrastructure Security</h1></p><p>Sanjeevani 2.0 implements measures to secure the deployment infrastructure.</p><p>##<h1>Deployment</h1></p><p><li><strong>CI/CD</strong> - Secure CI/CD pipeline</li>
+<li><strong>Secrets Management</strong> - Secrets are managed securely</li>
+<li><strong>Environment Variables</strong> - Environment variables are used for configuration</li>
+<li><strong>Container Security</strong> - Docker containers are secured</li></p><p>##<h1>Hosting</h1></p><p><li><strong>Netlify</strong> - Frontend is hosted on Netlify with security features</li>
+<li><strong>Render</strong> - Backend is hosted on Render with security features</li>
+<li><strong>MongoDB Atlas</strong> - Database is hosted on MongoDB Atlas with security features</li></p><p>#<h1>Compliance</h1></p><p>Sanjeevani 2.0 is designed to comply with healthcare data regulations.</p><p>##<h1>HIPAA Compliance</h1></p><p><li><strong>Data Encryption</strong> - PHI is encrypted</li>
+<li><strong>Access Controls</strong> - Access to PHI is restricted</li>
+<li><strong>Audit Logging</strong> - Access to PHI is logged</li>
+<li><strong>Business Associate Agreements</strong> - BAAs are in place with service providers</li></p><p>##<h1>GDPR Compliance</h1></p><p><li><strong>Data Minimization</strong> - Only necessary data is collected</li>
+<li><strong>Consent</strong> - User consent is obtained</li>
+<li><strong>Data Portability</strong> - Users can export their data</li>
+<li><strong>Right to be Forgotten</strong> - Users can delete their data</li></p><p>#<h1>Security Testing</h1></p><p>Sanjeevani 2.0 undergoes regular security testing.</p><p>##<h1>Testing Methods</h1></p><p><li><strong>Static Analysis</strong> - Code is analyzed for security issues</li>
+<li><strong>Dependency Scanning</strong> - Dependencies are scanned for vulnerabilities</li>
+<li><strong>Dynamic Analysis</strong> - Running application is tested for vulnerabilities</li>
+<li><strong>Penetration Testing</strong> - Manual testing for security issues</li></p><p>##<h1>Vulnerability Management</h1></p><p><li><strong>Reporting</strong> - Security issues can be reported to security@sanjeevani-health.com</li>
+<li><strong>Triage</strong> - Issues are triaged based on severity</li>
+<li><strong>Remediation</strong> - Issues are fixed promptly</li>
+<li><strong>Disclosure</strong> - Responsible disclosure policy is followed</li></p><p>#<h1>Security Best Practices</h1></p><p>Follow these best practices to maintain security:</p><p><li><strong>Keep Dependencies Updated</strong> <li>Regularly update dependencies</li></li>
+2. <strong>Secure Coding</strong> <li>Follow secure coding practices</li>
+3. <strong>Code Review</strong> <li>Review code for security issues</li>
+4. <strong>Security Training</strong> <li>Train developers on security</li>
+5. <strong>Incident Response</strong> <li>Have an incident response plan</li>
+6. <strong>Regular Audits</strong> <li>Conduct regular security audits</li>
+7. <strong>Stay Informed</strong> <li>Stay informed about security threats</li></p><p>#<h1>Additional Resources</h1></p><p><li><a href="https://owasp.org/www-project-top-ten/">OWASP Top Ten</a></li>
+<li><a href="https://www.hhs.gov/hipaa/for-professionals/security/index.html">HIPAA Security Rule</a></li>
+<li><a href="https://gdpr.eu/">GDPR</a></li>
+<li><a href="https://reactjs.org/docs/security.html">React Security</a></li>
+<li><a href="https://fastapi.tiangolo.com/tutorial/security/">FastAPI Security</a></li>
+<li><a href="https://docs.mongodb.com/manual/security/">MongoDB Security</a></li>
+</p></body>
+</html>

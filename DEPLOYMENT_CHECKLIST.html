@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjeevani 2.0 - DEPLOYMENT_CHECKLIST.md</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        code {
+            background-color: #f8f8f8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            color: #555;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body><p><h1>Sanjeevani 2.0 Deployment Checklist</h1></p><p>Use this checklist to ensure a smooth deployment of Sanjeevani 2.0 to production.</p><p>#<h1>Pre-Deployment</h1></p><p>##<h1>Code and Configuration</h1></p><p><li>[ ] All features are implemented and tested</li>
+<li>[ ] All tests are passing</li>
+<li>[ ] Code has been reviewed</li>
+<li>[ ] Environment variables are configured</li>
+<li>[ ] GitHub Actions workflows are valid</li>
+<li>[ ] Docker configurations are correct</li>
+<li>[ ] Netlify configuration is correct</li>
+<li>[ ] Render configuration is correct</li></p><p>##<h1>External Services</h1></p><p><li>[ ] MongoDB Atlas cluster is set up</li>
+<li>[ ] Firebase project is configured</li>
+<li>[ ] Twilio account is set up</li>
+<li>[ ] Google Maps API key is obtained</li>
+<li>[ ] Google Analytics account is set up</li>
+<li>[ ] Sentry account is set up</li></p><p>##<h1>Security</h1></p><p><li>[ ] Secrets are not committed to the repository</li>
+<li>[ ] Environment variables are set up in GitHub Secrets</li>
+<li>[ ] CORS is properly configured</li>
+<li>[ ] JWT secret is secure</li>
+<li>[ ] API endpoints are properly secured</li>
+<li>[ ] Rate limiting is configured</li>
+<li>[ ] Security headers are configured</li></p><p>#<h1>Deployment</h1></p><p>##<h1>GitHub Repository</h1></p><p><li>[ ] Repository is created on GitHub</li>
+<li>[ ] Code is pushed to the repository</li>
+<li>[ ] GitHub Secrets are set up</li></p><p>##<h1>Netlify (Frontend)</h1></p><p><li>[ ] Netlify site is created</li>
+<li>[ ] Build settings are configured</li>
+<li>[ ] Environment variables are set</li>
+<li>[ ] Custom domain is configured (if applicable)</li>
+<li>[ ] SSL is enabled</li></p><p>##<h1>Render (Backend)</h1></p><p><li>[ ] Render service is created</li>
+<li>[ ] Build settings are configured</li>
+<li>[ ] Environment variables are set</li>
+<li>[ ] Custom domain is configured (if applicable)</li>
+<li>[ ] SSL is enabled</li></p><p>##<h1>CI/CD Pipeline</h1></p><p><li>[ ] GitHub Actions workflows are triggered</li>
+<li>[ ] Frontend build is successful</li>
+<li>[ ] Backend build is successful</li>
+<li>[ ] Frontend deployment is successful</li>
+<li>[ ] Backend deployment is successful</li></p><p>#<h1>Post-Deployment</h1></p><p>##<h1>Verification</h1></p><p><li>[ ] Frontend is accessible</li>
+<li>[ ] Backend is accessible</li>
+<li>[ ] API endpoints are working</li>
+<li>[ ] Authentication is working</li>
+<li>[ ] Multilingual support is working</li>
+<li>[ ] Voice commands are working</li>
+<li>[ ] 3D health models are working</li>
+<li>[ ] Real-time notifications are working</li>
+<li>[ ] Emergency features are working</li></p><p>##<h1>Monitoring and Logging</h1></p><p><li>[ ] Sentry is capturing errors</li>
+<li>[ ] Google Analytics is tracking page views</li>
+<li>[ ] Firebase Performance Monitoring is working</li>
+<li>[ ] Logs are being collected</li>
+<li>[ ] Alerts are configured</li></p><p>##<h1>Documentation</h1></p><p><li>[ ] Deployment documentation is updated</li>
+<li>[ ] API documentation is updated</li>
+<li>[ ] User documentation is updated</li></p><p>#<h1>Final Steps</h1></p><p><li>[ ] Notify team of successful deployment</li>
+<li>[ ] Monitor application for issues</li>
+<li>[ ] Collect user feedback</li>
+<li>[ ] Plan for future updates</li></p><p>#<h1>Notes</h1></p><p>Use the following scripts to automate parts of the deployment process:</p><p><li><code>setup-github.sh</code> - Set up GitHub repository</li>
+<li><code>setup-github-secrets.sh</code> - Set up GitHub Secrets</li>
+<li><code>validate-workflows.sh</code> - Validate GitHub Actions workflows</li></p><p>Refer to <code>DEPLOYMENT.md</code> for detailed deployment instructions.
+</p></body>
+</html>

@@ -1,0 +1,91 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'sanjeevani-backend/**'
+      - '.github/workflows/backend-deploy.yml'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    services:
+      mongodb:
+        image: mongo:4.4
+        ports:
+          - 27017:27017
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          cache: 'pip'
+          cache-dependency-path: 'sanjeevani-backend/requirements.txt'
+          
+      - name: Install dependencies
+        run: |
+          cd sanjeevani-backend
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-cov
+          
+      - name: Run tests
+        run: |
+          cd sanjeevani-backend
+          pytest --cov=app
+        env:
+          MONGODB_URL: mongodb://localhost:27017
+          MONGODB_DB_NAME: sanjeevani_test
+          JWT_SECRET_KEY: test_secret_key
+          JWT_ALGORITHM: HS256
+          JWT_ACCESS_TOKEN_EXPIRE_MINUTES: 60
+  
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Install Render CLI
+        run: npm install -g @renderinc/cli
+        
+      - name: Deploy to Render
+        run: |
+          echo "${{ secrets.RENDER_YAML }}" > sanjeevani-backend/render.yaml
+          cd sanjeevani-backend
+          render deploy --yaml render.yaml
+        env:
+          RENDER_TOKEN: ${{ secrets.RENDER_TOKEN }}
+          
+      # Alternative: Deploy to Heroku
+      - name: Deploy to Heroku
+        if: ${{ env.USE_HEROKU == 'true' }}
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          appdir: "sanjeevani-backend"
+        env:
+          USE_HEROKU: ${{ secrets.USE_HEROKU }}
+          HD_MONGODB_URL: ${{ secrets.MONGODB_URL }}
+          HD_MONGODB_DB_NAME: ${{ secrets.MONGODB_DB_NAME }}
+          HD_JWT_SECRET_KEY: ${{ secrets.JWT_SECRET_KEY }}
+          HD_JWT_ALGORITHM: ${{ secrets.JWT_ALGORITHM }}
+          HD_JWT_ACCESS_TOKEN_EXPIRE_MINUTES: ${{ secrets.JWT_ACCESS_TOKEN_EXPIRE_MINUTES }}
+          HD_FIREBASE_CREDENTIALS: ${{ secrets.FIREBASE_CREDENTIALS }}
+          HD_TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          HD_TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          HD_TWILIO_PHONE_NUMBER: ${{ secrets.TWILIO_PHONE_NUMBER }}
+          HD_GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          HD_SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+          HD_ENVIRONMENT: 'production'

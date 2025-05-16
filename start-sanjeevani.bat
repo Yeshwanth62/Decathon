@@ -1,0 +1,3 @@
+@echo off
+echo Starting Sanjeevani 2.0...
+powershell -ExecutionPolicy Bypass -File start-sanjeevani-simple.ps1

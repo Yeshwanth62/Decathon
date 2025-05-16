@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#4299E1" />
+    <meta
+      name="description"
+      content="Sanjeevani 2.0 - A comprehensive healthcare platform with multilingual support and advanced features"
+    />
+    <meta name="keywords" content="healthcare, appointments, doctors, hospitals, multilingual, 3D health models" />
+    <meta name="author" content="Sanjeevani Health" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.svg" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Sanjeevani 2.0 - Healthcare Platform</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GA_TRACKING_ID%"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '%REACT_APP_GA_TRACKING_ID%', {
+        send_page_view: false // We'll track page views manually for SPA
+      });
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
