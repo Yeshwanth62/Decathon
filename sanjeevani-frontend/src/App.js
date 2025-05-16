@@ -23,6 +23,11 @@ import { getUser, isAuthenticated } from './utils/auth';
 import { trackPageView } from './utils/analytics';
 import { setUser as setSentryUser } from './utils/sentry';
 
+// Development-only components
+const EnvTestDisplay = process.env.NODE_ENV === 'development'
+  ? React.lazy(() => import('./components/EnvTestDisplay'))
+  : () => null;
+
 function App() {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -138,6 +143,17 @@ function App() {
               />
             }
           />
+          {/* Development-only routes */}
+          {process.env.NODE_ENV === 'development' && (
+            <Route
+              path="/env-test"
+              element={
+                <React.Suspense fallback={<Box p={5}>Loading...</Box>}>
+                  <EnvTestDisplay />
+                </React.Suspense>
+              }
+            />
+          )}
         </Routes>
       </Box>
 

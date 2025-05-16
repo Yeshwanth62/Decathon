@@ -5,7 +5,10 @@ import { BrowserTracing } from '@sentry/tracing';
  * Initialize Sentry for error tracking
  */
 export const initSentry = () => {
-  if (process.env.REACT_APP_SENTRY_DSN) {
+  // Check if we have a valid Sentry DSN (not a placeholder)
+  if (process.env.REACT_APP_SENTRY_DSN &&
+      process.env.REACT_APP_SENTRY_DSN !== 'demo-sentry-dsn' &&
+      process.env.REACT_APP_SENTRY_DSN.includes('sentry.io')) {
     Sentry.init({
       dsn: process.env.REACT_APP_SENTRY_DSN,
       integrations: [new BrowserTracing()],
@@ -25,7 +28,7 @@ export const initSentry = () => {
       },
     });
   } else {
-    console.warn('Sentry DSN not provided. Error tracking is disabled.');
+    console.warn('Sentry DSN not provided or invalid. Error tracking is disabled.');
   }
 };
 
